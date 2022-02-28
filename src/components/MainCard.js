@@ -56,12 +56,12 @@ function MainCard() {
                     const transaction = await contractWrapper.mint(currentAccount);
       
                     if (transaction.status === true) {
-                    const currentToken = await contractWrapper.totalSupply();
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Congratulations!',
-                        text: 'You have minted token number: ' + currentToken.toString(),
-                        footer: '<a target="_blank" href="https://testnets.opensea.io/account">View on Opensea</a>'
+                      const currentToken = await contractWrapper.totalSupply();
+                      Swal.fire({
+                          icon: 'success',
+                          title: 'Congratulations!',
+                          text: 'You have minted token number: ' + currentToken.toString(),
+                          footer: '<a target="_blank" href="https://testnets.opensea.io/account">View on Opensea</a>'
                     })
                 
                     } else {
@@ -222,7 +222,7 @@ function MainCard() {
                         </p>
                       </Grid>
                       <Grid item xs={12} mt={5} className="btnContainer">
-                        <Button onClick={handleMintMany} className="cardBtn my-3" variant="contained">
+                        <Button onClick={handleMint} className="cardBtn my-3" variant="contained">
                           MINT NOW
                         </Button>
                         <Button

@@ -60,21 +60,18 @@ class ContractWrapper {
 
     async mint(address) {
         const cost = await this.calculateTokenCostFor(address)
-        const weiCost = window.web3.utils.toWei(cost, 'ether')
         const transaction = await window.contract.methods
             .mint(address)
-            .send({ from: this.loggedUser, value: weiCost });
+            .send({ from: this.loggedUser, value: cost });
         return transaction
 
     }
 
     async mintMany(address, mintAmount) {
         const cost = await this.calculateTokenCostFor(address) * mintAmount
-        console.log(cost.toString())
-        const weiCost = window.web3.utils.toWei(cost.toString(), 'ether')
         const transaction = await window.contract.methods
             .mintMany(address, mintAmount)
-            .send({ from: this.loggedUser, value: weiCost });
+            .send({ from: this.loggedUser, value: cost });
         return transaction
 
     }
@@ -177,7 +174,8 @@ class ContractWrapper {
         if (isOwner || isWhitelisted) {
             tokenCost = 0
         }
-        return tokenCost
+        const weiCost = window.web3.utils.toWei(tokenCost.toString(), 'ether')
+        return weiCost
     }
 
     async getMaxMintAmountFor(address) {
