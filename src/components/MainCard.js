@@ -223,12 +223,30 @@ function MainCard() {
                         </p>
                       </Grid>
                       <Grid item xs={12} mt={5} className="btnContainer">
-                        <Button onClick={handleMint} className="cardBtn my-3" variant="contained">
+                        <Button 
+                          style={{
+                            outline: "none",
+                            border: "3px solid #fff",
+                            color: "#fff",
+                            fontWeight: "bold",
+                  
+                            borderRadius: "50px",
+                          }}
+                          onClick={handleMint} 
+                          className="cardBtn my-3" 
+                          variant="contained">
                           MINT NOW
                         </Button>
                         <Button
                           className="cardBtn my-3"
-                          style={{ marginLeft: "20px" }}
+                          style={{
+                            outline: "none",
+                            border: "3px solid #fff",
+                            color: "#fff",
+                            fontWeight: "bold",
+                  
+                            borderRadius: "50px",
+                          }}
                           variant="contained"
                         >
                           OPENSEA
