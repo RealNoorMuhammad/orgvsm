@@ -1,0 +1,11 @@
+.main_nft {
+  width: 430px;
+  height: 360px;
+}
+
+@media only screen and (max-width: 600px) {
+  .main_nft {
+    width: 230px;
+    height: 360px;
+  }
+}
