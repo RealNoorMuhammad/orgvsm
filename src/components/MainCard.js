@@ -2,6 +2,7 @@ import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 
 import metapassvideo from "../media/metapassvideo.mp4";
+import redFlower from "../media/redFlower.mp4";
 
 import "./main.css";
 
@@ -237,7 +238,7 @@ function MainCard() {
                         <video width="110" loop="true" autoplay="autoplay" muted>
                           <source
                             className="w-100"
-                            src={metapassvideo}
+                            src={redFlower}
                             type="video/mp4"
                           />
                         </video>
