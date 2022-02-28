@@ -1,617 +1,150 @@
-:root{
-  --chakra-colors-backgroundGradientPrimary:#4360E6;
-  --chakra-colors-backgroundGradientSecondary:#00FFC2;
-  --dark-gree-color:#09A37E;
-  --gray:#171923
-}
-/* @font-face{
-  font-family: poiret;
-  src: url(./fonts/poiret-one-latin-400-normal.b39fc40f.woff2);
-} */
-@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
-.NavBAR{
-  height: 160px;
-  background-color:white;
-  opacity: 0.99;
-}
-.headerLogo{
-  width: 150px;
-}
-.headerBtn{
-  white-space: nowrap;
-  vertical-align: middle;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  width: auto;
-  line-height: 1.2;
-  border-radius: 9999px;
-  font-weight: 500;
-  /* padding-top: 1.5rem;
-  padding-bottom: 1.5rem; */
-  padding-left: 2rem;
-  padding-right: 2rem;
-  height: 3.1rem;
-  min-width: 2.5rem;
-  font-size: 1rem;
-  border: 1px solid;
-  color: #09A37E;
-  border-color: #09A37E;
-  background-color: transparent;
-}
-.headerBtn:hover{
-  background: linear-gradient(0deg, rgba(9, 163, 126, 0.05), rgba(9, 163, 126, 0.05)),#F5F9FC;
-  color: #09A37E;
-  border-color: #09A37E;
-}
-.headerBtnSM{
-  white-space: nowrap;
-  vertical-align: middle;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  width: auto;
-  margin-top: -6px;
-  line-height: 1.2;
-  border-radius: 9999px;
-  font-weight: 500;
-  padding-top: 0;
-  height: 3.1rem;
-  min-width: 2.5rem;
-  font-size: 1rem;
-  border: 1px solid;
-  color: #09A37E;
-  border-color: transparent;
-  background-color: transparent;
-}
-.headerBtnSM:hover{
-  background: transparent;
-  color: #09A37E;
-  border-color: transparent;
-  text-decoration: underline;
-}
-.navItem{
-  /* width: 50%; */
-  justify-content: space-between;
-}
-.navItem a{
-  font-size: 18px;
-  margin-right: 50px;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  background-color: transparent;
-  font-weight: 400;
-  color:black !important;
-}
-.navItem a:hover{
-  text-decoration: underline;
-}
-.navBottomBorder{
-  position: absolute;
-  height: 23%;
-  width: 100%;
-  background-image: linear-gradient(to right, var(--chakra-colors-backgroundGradientPrimary), var(--chakra-colors-backgroundGradientSecondary));
-  -webkit-filter: blur(24px);
-  filter: blur(24px);
-  opacity: 0.99;
-}
-.section1{
-    background-color: rgba(245, 249, 252);
-    /* height: 100vh; */
-    width: 100%;
-}
-.sec1Head1{
-    /* font-family: 'poiret'; */
-    font-family: 'Poiret One', cursive;
-    font-weight: 100;
-    font-size: 68px;
-    line-height: 1.2;
-    text-align: center;
-    -webkit-align-self: center;
-    -ms-flex-item-align: center;
-    align-self: flex-start;
-    margin-bottom:3rem;
-}
-.sec1con1{
-    padding-top: 80px;
-    min-height: calc(100vh - 380px);
-}
-.sec1para{
-  font-size: 24px;
-  font-weight: 300;
-  padding-top: 25px;
-}
-.memberBtn{
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0.24)),linear-gradient(41.41deg, #3E8CF0 -16.32%, #4360E6 79.29%);
-  outline: none;
-  padding: 2rem;
-  font-size: 24px;
-  font-weight: 500;
-  border-radius: 9999px;
-  box-shadow: 0px 4px 16px rgb(67 96 230 / 56%);
-  position: relative;
-  white-space: nowrap;
-  vertical-align: middle;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  width: auto;
-  line-height: 1.2;
-  min-width: 2.5rem;
-  height: 4.5rem;
-}
-.section2{
-    background:url('./images/bottom_fish.png');
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
-    width: 100%;
-}
-.section3{
-   background-color: rgba(245, 249, 252);
-   /* height: 100vh; */
-}
-.section3Head1{
-  font-size: 48px;
-  font-weight: 100;
-  color: #171923;
-  margin-bottom: 2rem;
-}
-.section3Para{
-  font-size: 25px;
-  font-weight: 300;
-  color: #171923;
-}
-.diningBtn{
-  background: transparent;
-  padding: 1.75rem 1.5rem;
-  border: 1px solid;
-  font-weight: 500;
-  line-height: 1.2;
-  border-radius: 9999px;
-  font-size: 20px;
-  height: 3.75rem;
-  border-color: var(--dark-gree-color);
-  color: var(--dark-gree-color);
-  margin-right: 10px;
-}
-.diningBtn:hover{
-  background: linear-gradient(0deg, rgba(9, 163, 126, 0.05), rgba(9, 163, 126, 0.05)),#F5F9FC;
-  border-color: var(--dark-gree-color);
-  color: var(--dark-gree-color);
-}
-.section4{
-  background-color: rgba(245, 249, 252);
-  position: relative;
-}
-.section4BGDiv{
-  background-color: rgba(245, 249, 252);
-  min-height: 140vh;
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-.circleDiV{
-  /* left: 14em;
-  transform: translateY(18.1333px) translateZ(0px); */
-  border: 1px solid white;
-  background: linear-gradient(304.27deg, #ffffff -11.17%, rgba(225, 239, 244, 0) 100%);
-  box-shadow: 0px 16px 50px rgb(0 70 207 / 5%);
-  flex-grow: 0;
-  width: 17em;
-  height: 17em;
-  border-radius: 9999px;
-  position: absolute;
-}
-.bUpperDiv{
-  position: absolute;
-  top: 100px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.section4UpperDiv{
-  /* position: absolute;
-  top: 100px; */
-  background-image: linear-gradient(to bottom, #ECECF9, #BEDBFA);
-  border-radius: 24px;
-  box-shadow: 0px 25px 50px -12px rgb(0 0 0 / 25%);
-  /* height: 100vh; */
-  width: 46em;
-  padding: 6rem;
-}
-.membership{
-  font-size: 36px;
-  font-weight: 100;
-  color: var(--gray);
-}
-.upperDivTexts{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-}
-.ut1{
-  font-size: 20px;
-  font-weight: 300;
-  color: var(--gray);
-  margin-bottom: 8px;
-}
-.ut2{
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 36px;
-  color: var(--gray);
-  margin-bottom: 0.5rem;
-}
-.ut3{
-  font-size: 18px;
-  line-height: 27px;
-  color: var(--gray);
-  font-weight: 400;
-}
-.laststart{
-  margin-top:-7.7vh;
-}
-.lastHead{
- font-size: 2.2vw;
-}
-.section5{
-  height: 150vh;
-  background-color: #E1EFF4; 
-}
-.sec5head1{
-  line-height: 1.2;
-  font-family:'Poiret One', cursive;
-  font-weight: 400;
-  font-size: 40px;
-  margin: 2rem 0;
-}
-.whiteColumn{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 30%;
-  background-color: white;
-  border-radius: 24px;
-}
-.transParantColumn{
-  width: 30%;
-}
-.btnTD{
-  width: 30%;
-}
-tr td, tr td p{
-  text-align: center;
-}
-.token2{
-  background-color: white;
-  border-radius: 24px;
-  height: 735px;
-}
-.aboveToken{
-  position: absolute;
-  top: 7.75em;
-  width: 110%;
-  height: 14em;
-  background-color: rgba(203, 216, 246, 0.5);
-  border-radius: 24px;
-}
-.upperTokenText{
-  position: absolute;
-  left: 5px;
-  top: 0.5em;
-  width: 100%;
-  height: 100vh;
-  /* background-color: red; */
-  opacity: 0.5;
-}
-.leftSmText{font-size: 18px;}
-.textStyle{
-   color: black;
-   font-size: 1.9vw !important;
-}
-
-.lefttokenpara{
-  text-align: start;
-}
-.tokenStart{
-  /* margin-top: 0.5em; */
-  display: flex;
-  justify-content: center;
-  /* background-color: #09A37E; */
-}
-.tokenS{
-  display: flex;
-  justify-content: center;
-}
-.tokenSCan1{
-  padding-top: 20px;
-  border-bottom: 1px solid;
-  width: 80%;
-}
-.tickStart{
-  margin-top: 60px;
-}
-.tokenSCan2{
-  padding-top: 20px;
-  width: 80%;
-}
-.tokanCan1{
-  padding-top: 40px;
-  border-bottom: 1px solid;
-  width: 80%;
-}
-.teamTitle{
-  font-size: 14px;
-  font-weight: 500;
-}
-.teamName{
-  line-height: 1.2;
-  font-weight: 400;
-  font-size: 40px;
-  font-family:'Poiret One', cursive;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-}
-.learnMoreBtn{
-  font-size: 20px;
-  font-weight: 100;
-  padding-left: 0;
-  background-color: transparent;
-  border:transparent;
-  outline: 1px solid transparent;
-  outline-offset: 2px;
-  color: black;
-}
-.learnMoreBtn:hover{
-  text-decoration: underline;
-  background-color: transparent;
-  border: transparent;
-  color: black;
-}
-.readyToMember{
-  font-family:'Poiret One', cursive;
-  font-size: 2.25rem;
-  line-height: 1.2;
-  font-weight: 400;
-}
-.section7{
-  display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  background-image: linear-gradient(to bottom, #343D4B, #242D3A);
-  width: 100%;
-  opacity: 0.99;
-  padding: 6rem 0;
-}
-.section7Head1{
-  font-family:'Poiret One', cursive;
-  line-height: 1.2;
-  font-weight: 400;
-  font-size: 40px;
-  color: white;
-  margin-bottom: 1rem;
-}
-.informPara{
-  color: #A0AEC0;
-  font-weight: 400;
-  font-size: 22px;
-}
-.emailInput{
-  width: 100%;
-  min-width: 0px;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  padding-inline-start: 1rem;
-  padding-inline-end: 1rem;
-  height: 2.5rem;
-  border-radius: 9999px;
-  border: 2px solid;
-  border-color: transparent;
-  background: #EDF2F7;
-  background-color: white;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  font-family:'Poiret One', cursive;
-  font-size: 1rem;
-  font-weight:bold;
-  color: black;
-}
-.mailingBtn{
-  width: 100%;
-  min-width: 0px;
-  vertical-align: middle;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  width: 100%;
-  height: 3.1rem;
-  line-height: 1.2;
-  font-weight: bold;
-  border-radius: 9999px;
-  font-size: 1rem;
-  padding-inline-start: 1rem;
-  padding-inline-end: 1rem;
-  border: 1px solid;
-  border-color: #09A37E;
-  color: #09A37E;
-  cursor: pointer;
-  font-family:'Poiret One', cursive;
-}
-.mailingBtn:hover{
-  background: linear-gradient(0deg, rgba(9, 163, 126, 0.05), rgba(9, 163, 126, 0.05)),#F5F9FC;
-  color: #09A37E;
-}
-.footer{
-  background-color: #434362;
-  padding-top: 4rem;
-  padding-bottom: 1rem;
-  overflow: hidden;
-  opacity: 0.99;
-  width: 100%;
-  /* height: 100vh; */
-}
-.footerSmText{
-  font-size: 14px;
-  font-weight: 400;
-  font-variant: all-small-caps;
-  color: #A0AEC0;
-}
-.footerItem{
-  text-decoration: underline;
-  cursor: pointer;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  color:#E1EFF4 !important;
-  margin-bottom: 20px;
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  background-color: transparent;
-}
-.hrFooter{
-  border-top: 1px solid #A0AEC0;
-  height: 1px;
-  color: #A0AEC0;
-  background-color: #A0AEC0;
-}
-.socialIcon{
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-}
-.socialIconText{
-  color:#E1EFF4;
-  font-size: 18px;
-  margin-left: 2px;
-}
-.copyri8Text{
-  font-size: 14px;
-  color: #A0AEC0;
-  text-align: right;
-}
-.footerEmail{
-  text-decoration: underline;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #E1EFF4 !important;
-}
-.topTokenText{
-  font-size: 28px;
-  font-weight: 300;
-}
-.firstToken{
-    margin-top: 1.5rem !important;
-}
-
-@media(max-width:1240px){
-  .laststart{
-    margin-top:-6vh;
+body{
+	padding: 0;
+	margin: 0;
+	background:black;
   }
-}
-@media(max-width:1100px){
-  .laststart{
-    margin-top:-4.6vh;
+  .App{
+	background-image: url('./images/banner.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	/* height: 100vh; */
+	/* width: 100vw; */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
   }
-}
-@media(max-width:1048px){
-  .teamName{
-    font-size: 20px;
-  } 
-  .aboveToken{
-    top: 5.75em;
+  .sicons{
+	  color:white;
+	  font-size:25px;
   }
-}
-@media(max-width:900px){
-  .aboveToken{
-    width: 105%;
+  .sicons:hover{
+	  color:#333;
   }
-  .laststart{
-    margin-top:1vh;
+  iframe{
+	outline: none;
   }
-  .tokenSCan2 {
-    padding-top: 28px
+  iframe:focus {
+	outline: none;
   }
-}
-@media(max-width:899px){
-  .headerLogo {
-    width: 50px;
+  .cardContent{
+	  display: flex;
+	  flex-wrap: wrap;
+	  height: 100%;
+	  align-items: center;
   }
-  .section4UpperDiv{
-    padding: 2rem;
+  .cardBtn{
+	padding: 15px 50px !important;
+	font-weight: 500 !important;
+	border-radius: 5rem !important;
+	align-self: flex-start !important;
+	text-align: center !important;
+	transition: 0.2s all ease-in-out;
+	background-color: transparent !important;
+	color:white !important;
+	outline: 1px auto white !important;
   }
-}
-@media(max-width:878px){
-  .navItem a{
-    margin-right: 10px;
+  .cardBtn:hover{
+	background-color: #333 !important;
+	color:white !important;
   }
-}
-@media(max-width:800px){
-  .textStyle {
-    font-size: 2.2vw !important;
+  .undertitle{
+	  color:#999;
   }
-}
-@media(max-width:700px){
-  .token2 {
-    height: 700px;
+  .undertitle:hover{
+	  color:white;
   }
-}
-@media(max-width:631px){
-  .diningBtn{
-    width: 100%;
+  .btnContainer{
+	  display: flex;
+	  margin-bottom: -60px !important;
   }
-  .textStyle {
-    font-size: 2.4vw !important;
+  .smImageContainer{
+	  display: flex;
+	  justify-content: end;
+	  flex-grow: 1;
+	  align-items: end;
   }
-  .aboveToken{
-    top: 4.75em;
+  @media (max-width:1155px){
+	  .btnContainer{
+		  margin-bottom: 0 !important;
+	  }
+	  .smImageContainer{
+		  justify-content: center;
+	  }
   }
-} 
-@media(max-width:670px){
-  .navItem a,.headerBtnSM{
-    font-size: 11px;
+  @media (max-width:899px){
+	  .cardContent{
+		 justify-content: center;
+		 align-items: center;
+	  }
+	  .title{
+		  text-align: center;
+	  }
+	  .btnContainer{
+		  justify-content: center;
+	  }
+	  .cardBtn{
+		  padding: 15px 30px !important;
+	  }
+	  .mainHead{
+		  font-size: 1.2rem;
+		  margin-top: 25px;
+	  }
   }
-  .NavBAR {
-    height: 100px;
+  
+  
+  
+  
+  /* ticker starts here */
+  .ticker-wrapper-h{
+	width: 100%;
+	  display: flex;	
+	  position: relative;
+	  overflow: hidden;
+	background-color: #B42C2C;
+	border-bottom-left-radius: 14px;
+	border-bottom-right-radius: 14px;
   }
-  .navBottomBorder{
-    height: 12%;
+  .news-ticker-h{
+	  display: flex;
+	  margin:0;
+	  padding: 0;
+	  padding-left:90%;
+	  z-index: 999;
+	  animation-iteration-count: infinite;
+	  animation-timing-function: linear;
+	  animation-name: tic-h;
+	  animation-duration: 50s;
+	  
   }
-  .sec1Head1{
-    font-size: 40px;
+  .news-ticker-h:hover { 
+	  animation-play-state: paused; 
   }
-  .headerLogo {
-    width: 40px;
-    margin-top: -14px;
+  .news-ticker-h li{
+	  font-family: Arial, Helvetica, sans-serif;
+	  display: flex;
+	  width: 100%;
+	  font-size: 16px;
+	  padding-top: 6px;
+	  padding-bottom: 6px;
+	  align-items: center;
+	  white-space: nowrap;
+	  padding-left: 20px;
   }
-  .section4{
-    height: 1200px;
+  
+  .news-ticker-h li a{
+	  color: white;
   }
-}
-@media(max-width:450px){
-  .tokenS > .diningBtn{
-    font-size: 12px;
+  
+  @keyframes tic-h {
+	  0% {
+		  -webkit-transform: translate3d(0, 0, 0);
+		  transform: translate3d(0, 0, 0);
+		  visibility: visible;
+	  }
+	  100% {
+		  -webkit-transform: translate3d(-100%, 0, 0);
+		  transform: translate3d(-100%, 0, 0);
+	  }
   }
-  .token2 {
-        height: 670px;
-    }
-  .firstToken{
-    margin-top: -0.5rem !important;
-  }
-  .navItem a{
-    margin-right: 0px;
-  }
-  .headerBtnSM {
-    margin-top: -6px;
-  }
-  .section5 {
-   display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 1170px;
-  }
-  .textStyle {
-    font-size: 2.6vw !important;
-  }
-}
+  /* ticker ends here */
