@@ -179,7 +179,6 @@ function MainCard() {
         }
       }
 
-
       return (
         <Grid
           container
@@ -195,7 +194,7 @@ function MainCard() {
             <Grid container pt={5}>
               <Grid item xs={12} pt={5}>
                 <Grid container className="cardContent" pt={3}>
-                  <Grid item md={6}>
+                  <Grid item md={6} >
                     <Grid container justifyContent={"center"} alignItems={"start"}>
                       <video
                         style={{ transform: "scale(1.5)", marginTop: "-60px" }}
@@ -223,30 +222,12 @@ function MainCard() {
                         </p>
                       </Grid>
                       <Grid item xs={12} mt={5} className="btnContainer">
-                        <Button 
-                          style={{
-                            outline: "none",
-                            border: "3px solid #fff",
-                            color: "#fff",
-                            fontWeight: "bold",
-                  
-                            borderRadius: "50px",
-                          }}
-                          onClick={handleMint} 
-                          className="cardBtn my-3" 
-                          variant="contained">
-                          MINT NOW
+                        <Button onClick={handleMint} className="cardBtn my-3" variant="contained">
+                          Mint Now
                         </Button>
                         <Button
                           className="cardBtn my-3"
-                          style={{
-                            outline: "none",
-                            border: "3px solid #fff",
-                            color: "#fff",
-                            fontWeight: "bold",
-                  
-                            borderRadius: "50px",
-                          }}
+                          style={{ marginLeft: "20px" }}
                           variant="contained"
                         >
                           OPENSEA
@@ -298,5 +279,124 @@ function MainCard() {
           </Grid>
         </Grid>
       );
+
+      // return (
+      //   <Grid
+      //     container
+      //     style={{ width: "100%", overflow: "hidden" }}
+      //     mt={5}
+      //     justifyContent={"center"}
+      //   >
+      //     <Grid
+      //       container
+      //       pt={5}
+      //       style={{ backgroundColor: "black", width: "90%", borderRadius: "14px" }}
+      //     >
+      //       <Grid container pt={5}>
+      //         <Grid item xs={12} pt={5}>
+      //           <Grid container className="cardContent" pt={3}>
+      //             <Grid item md={6}>
+      //               <Grid container justifyContent={"center"} alignItems={"start"}>
+      //                 <video
+      //                   style={{ transform: "scale(1.5)", marginTop: "-60px" }}
+      //                   loop="true"
+      //                   autoplay="autoplay"
+      //                   className="main_nft"
+      //                   muted
+      //                 >
+      //                   <source
+      //                     className="w-100"
+      //                     src={metapassvideo}
+      //                     type="video/mp4"
+      //                   />
+      //                 </video>
+      //               </Grid>
+      //             </Grid>
+      //             <Grid item md={6}>
+      //               <Grid container>
+      //                 <Grid item xs={12}>
+      //                   <h2 className="title mainHead" style={{ color: "white" }}>
+      //                     INTO THE METAVERSE
+      //                   </h2>
+      //                   <p className="title mt-4 undertitle">
+      //                     All 30,000 NFTs have now been minted.
+      //                   </p>
+      //                 </Grid>
+      //                 <Grid item xs={12} mt={5} className="btnContainer">
+      //                   <Button 
+      //                     style={{
+      //                       outline: "none",
+      //                       border: "3px solid #fff",
+      //                       color: "#fff",
+      //                       fontWeight: "bold",
+                  
+      //                       borderRadius: "50px",
+      //                     }}
+      //                     onClick={handleMint} 
+      //                     className="cardBtn my-3" 
+      //                     variant="contained">
+      //                     MINT NOW
+      //                   </Button>
+      //                   <Button
+      //                     className="cardBtn my-3"
+      //                     style={{
+      //                       outline: "none",
+      //                       border: "3px solid #fff",
+      //                       color: "#fff",
+      //                       fontWeight: "bold",
+                  
+      //                       borderRadius: "50px",
+      //                     }}
+      //                     variant="contained"
+      //                   >
+      //                     OPENSEA
+      //                   </Button>
+      //                 </Grid>
+      //                 <Grid item className="smImageContainer" pt={10}>
+      //                   <video width="110" loop="true" autoplay="autoplay" muted>
+      //                     <source
+      //                       className="w-100"
+      //                       src={redFlower}
+      //                       type="video/mp4"
+      //                     />
+      //                   </video>
+      //                 </Grid>
+      //               </Grid>
+      //             </Grid>
+      //           </Grid>
+      //         </Grid>
+      //         <Grid item xs={12}>
+      //           <Grid container style={{ height: "100%" }} alignItems={"end"}>
+      //             <div class="ticker-wrapper-h">
+      //               <ul class="news-ticker-h">
+      //                 <li>
+      //                   <a href="">What is Lorem Ipsum?</a>
+      //                 </li>
+      //                 <li>
+      //                   <a href="">Why do we use it?</a>
+      //                 </li>
+      //                 <li>
+      //                   <a href="">Where does it come from?</a>
+      //                 </li>
+      //                 <li>
+      //                   <a href="">Where can I get some?</a>
+      //                 </li>
+      //                 <li>
+      //                   <a href="">Where can I get some?</a>
+      //                 </li>
+      //                 <li>
+      //                   <a href="">Where can I get some?</a>
+      //                 </li>
+      //                 <li>
+      //                   <a href="">Where can I get some?</a>
+      //                 </li>
+      //               </ul>
+      //             </div>
+      //           </Grid>
+      //         </Grid>
+      //       </Grid>
+      //     </Grid>
+      //   </Grid>
+      // );
 }
 export default MainCard;

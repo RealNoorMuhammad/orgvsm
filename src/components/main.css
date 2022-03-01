@@ -9,3 +9,43 @@
     height: 360px;
   }
 }
+
+@media only screen and (max-width: 1200px) {
+  .main_nft {
+    width: 230px;
+    height: 360px;
+  }
+}
+
+@media only screen and (max-width: 367px) {
+  .main_nft {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .main_nft {
+    width: 50px;
+    height: 10px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .main_nft {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media only screen and (max-width: 313px) {
+  .main_nft {
+    width: 100px;
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .main_nft {
+    width: 216px;
+    height: 278px;
+  }
+}

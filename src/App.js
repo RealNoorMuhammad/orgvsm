@@ -7,6 +7,12 @@ function App() {
     <div className="App" >
       <Header />
       <MainCard />
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <Footer />
     </div>
   );
