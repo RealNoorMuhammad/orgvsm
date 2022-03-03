@@ -6,7 +6,7 @@ import { makeStyles } from '@mui/styles';
 
 import Swal from 'sweetalert2'
 import Web3 from 'web3';
-import Tilt from 'react-parallax-tilt';
+
 
 import ContractWrapper from '../utils/ContractWrapper'
 require('dotenv').config()
@@ -113,7 +113,7 @@ async function mintMultipleTokens(mintAmount, currentAccount) {
 
 
   const contractWrapper = new ContractWrapper(currentAccount);
-  const maxAmount = await contractWrapper.getMaxMintAmountFor(currentAccount)
+  const maxAmount = await contractWrapper.maxMintAmount()
 
   if (
       validateMaxValueAndTriggerAlert(mintAmount, maxAmount)
@@ -123,7 +123,7 @@ async function mintMultipleTokens(mintAmount, currentAccount) {
           title: "Confirm transaction on Metamask",
           text: 'Once the transaction is done, a notification will appear. Please remain on the site and don\'t reload the page. You can see your transaction status on your Metamask extension.'
       })
-      const transaction = await contractWrapper.mintMany(currentAccount, parseInt(mintAmount))
+      const transaction = await contractWrapper.mint(parseInt(mintAmount))
 
       if (transaction.status === true) {
         Swal.fire({

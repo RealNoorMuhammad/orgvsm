@@ -1,23 +1,9 @@
+import MerkleHelper from "./MerkleHelper"
 require('dotenv').config()
 
 class ContractWrapper {
     constructor(loggedUser) {
       this.loggedUser = loggedUser;
-    }
-    
-    // Write contract
-    async whitelistUser(address) {
-        const transaction = await window.contract.methods
-            .whitelistUser(address)
-            .send({ from: this.loggedUser });
-        return transaction;
-    }
-
-    async removeWhiteListedUser(address) {
-        const transaction = await window.contract.methods
-            .removeWhiteListedUser(address)
-            .send({ from: this.loggedUser });
-        return transaction
     }
 
     async setCost(newCost) {
@@ -44,6 +30,13 @@ class ContractWrapper {
         }
     }
 
+    async togglePause(newState) {
+        const transaction = await window.contract.methods
+            .pause(newState)
+            .send({ from: this.loggedUser })
+        return transaction
+    }
+
     async setMaxMintAmount(newMaxMintAmount) {
         const transaction = await window.contract.methods
             .setMaxMintAmount(newMaxMintAmount)
@@ -51,29 +44,24 @@ class ContractWrapper {
         return transaction
     }
 
-    async setMaxWLMintAmount(newMaxMintAmount) {
+    async setMerkleRoot() {
+        const merkleHelper = new MerkleHelper()
+        const root = merkleHelper.getMerkleRoot()
         const transaction = await window.contract.methods
-            .setMaxWLMintAmount(newMaxMintAmount)
+            .setMerkleRoot(root)
             .send({ from: this.loggedUser })
         return transaction
     }
 
-    async mint(address) {
-        const cost = await this.calculateTokenCostFor(address)
+    async mint(mintAmount) {
+        const merkleHelper = new MerkleHelper()
+        const proof = merkleHelper.getMerkleProof(this.loggedUser)
+        const cost = await this.cost() * mintAmount
+        const weiCost = window.web3.utils.toWei(cost.toString(), 'ether')
         const transaction = await window.contract.methods
-            .mint(address)
-            .send({ from: this.loggedUser, value: cost });
+            .mint(mintAmount, proof)
+            .send({ from: this.loggedUser, value: weiCost })
         return transaction
-
-    }
-
-    async mintMany(address, mintAmount) {
-        const cost = await this.calculateTokenCostFor(address) * mintAmount
-        const transaction = await window.contract.methods
-            .mintMany(address, mintAmount)
-            .send({ from: this.loggedUser, value: cost });
-        return transaction
-
     }
 
     async withdraw() {
@@ -145,10 +133,6 @@ class ContractWrapper {
         const maxMintAmount = await window.contract.methods.maxMintAmount().call()
         return maxMintAmount
     }
-    async maxWLMintAmount() {
-        const maxWLMintAmount = await window.contract.methods.maxWLMintAmount().call()
-        return maxWLMintAmount
-    }
 
     // helper functions
     async getContractInfo() {
@@ -161,28 +145,15 @@ class ContractWrapper {
             cost: await this.cost(),
             balance: await this.balance(),
             maxMintAmount: await this.maxMintAmount(),
-            maxWLMintAmount: await this.maxWLMintAmount(),
             totalSupply: await this.totalSupply(),
         }
         return contractInfo
     }
 
-    async calculateTokenCostFor(address) {
-        const isWhitelisted = await this.isWhitelisted(address)
-        const isOwner = await this.isOwner(address)
+    async calculateTokenCost(mintAmount) {
         let tokenCost = await this.cost()
-        if (isOwner || isWhitelisted) {
-            tokenCost = 0
-        }
-        const weiCost = window.web3.utils.toWei(tokenCost.toString(), 'ether')
+        const weiCost = window.web3.utils.toWei(tokenCost.toString(), 'ether') * mintAmount
         return weiCost
-    }
-
-    async getMaxMintAmountFor(address) {
-        if (await this.isWhitelisted(address)) {
-            return await this.maxWLMintAmount()
-        }
-        return await this.maxMintAmount()
     }
 
     async isOwner(address) {

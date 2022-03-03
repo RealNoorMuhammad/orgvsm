@@ -2,23 +2,25 @@ import Button from "@mui/material/Button";
 import logo from "../images/newLogo.png";
 import Grid from "@mui/material/Grid";
 
+import "./main.css";
+
 function Footer() {
   return (
-    <Grid container >
+    <Grid container>
       <Grid
         container
-        px={4}
+        px={2}
         mt={5}
         display={"flex"}
         alignItems={"center"}
-        justifyContent={"space-between"}
-        style={{ background: "black", height: "10px" }}
+        style={{ background: "black", height: "60px" }}
+        className="footer_section"
       >
         <Grid item xs={8}>
-          <div style={{ width: "50px", height: "10%" }}>
+          <div style={{ width: "40px", height: "40%" }}>
             <img
               src={logo}
-              style={{ transform: " scale3d(1.5, 1.5, 1.5)", width: "100%" }}
+              style={{ transform: " scale3d(1.5, 1.5, 1.5)", width: "50px" }}
               className="w-100"
             />
           </div>
